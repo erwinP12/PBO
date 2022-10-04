@@ -1,0 +1,50 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+
+public class MyWorld extends World
+{
+    public MyWorld()
+    {    
+        super(600, 400, 1); 
+        prepare();
+    }
+  
+    private void prepare()
+    {
+        bus1 bus1 = new bus1();
+        addObject(bus1,92,193);
+        bus1 bus2 = new bus1();
+        addObject(bus2,600,300);
+        mobil1 mobil1 = new mobil1();
+        addObject(mobil1,87,81);
+        mobil1 mobil2 = new mobil1();
+        addObject(mobil2,250,250);
+        
+       
+    }
+}
+
+import greenfoot.*;
+public class bus1 extends Actor
+{
+    public void act()
+    {
+        move(3);
+        if(isAtEdge()){
+            setLocation(0,getY());
+        }
+    }
+}
+
+import greenfoot.*;
+public class mobil1 extends Actor
+{
+    public void act()
+    {
+        move(5);
+        if(isAtEdge()){
+            setLocation(0,getY());
+        }
+    }
+}
+
